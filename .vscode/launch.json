@@ -5,12 +5,22 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Debug Single File grammar",
+      "name": "Debug ArrayInit grammar",
       "type": "antlr-debug",
       "request": "launch",
       "input": "ArrayInit.example.txt",
       "grammar": "ArrayInit.g4",
       "startRule": "init",
+      "printParseTree": true,
+      "visualParseTree": true
+    },
+    {
+      "name": "Debug Expr grammar",
+      "type": "antlr-debug",
+      "request": "launch",
+      "input": "Expr.example.txt",
+      "grammar": "Expr.g4",
+      "startRule": "prog",
       "printParseTree": true,
       "visualParseTree": true
     }
