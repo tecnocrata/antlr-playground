@@ -8,8 +8,8 @@
       "name": "Debug ArrayInit grammar",
       "type": "antlr-debug",
       "request": "launch",
-      "input": "ArrayInit.example.txt",
-      "grammar": "ArrayInit.g4",
+      "input": "01/ArrayInit.example.txt",
+      "grammar": "01/ArrayInit.g4",
       "startRule": "init",
       "printParseTree": true,
       "visualParseTree": true
@@ -18,8 +18,8 @@
       "name": "Debug Expr grammar",
       "type": "antlr-debug",
       "request": "launch",
-      "input": "Expr.example.txt",
-      "grammar": "Expr.g4",
+      "input": "02/Expr.example.txt",
+      "grammar": "02/Expr.g4",
       "startRule": "prog",
       "printParseTree": true,
       "visualParseTree": true
