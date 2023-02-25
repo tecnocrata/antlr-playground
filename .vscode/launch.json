@@ -33,6 +33,15 @@
       "startRule": "file",
       "printParseTree": true,
       "visualParseTree": true
+    },
+    {
+      "name": "Debug Xml lexer",
+      "type": "antlr-debug",
+      "request": "launch",
+      "input": "06/Xml.example.xml",
+      "grammar": "06/XmlLexer.g4",
+      "printParseTree": true,
+      "visualParseTree": true
     }
   ]
 }
