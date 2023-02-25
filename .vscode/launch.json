@@ -23,6 +23,16 @@
       "startRule": "prog",
       "printParseTree": true,
       "visualParseTree": true
+    },
+    {
+      "name": "Debug Numbers Grouped grammar",
+      "type": "antlr-debug",
+      "request": "launch",
+      "input": "05/Numbers.example.txt",
+      "grammar": "05/NumbersGrouped.g4",
+      "startRule": "file",
+      "printParseTree": true,
+      "visualParseTree": true
     }
   ]
 }
