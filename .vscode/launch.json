@@ -42,6 +42,15 @@
       "grammar": "06/XmlLexer.g4",
       "printParseTree": true,
       "visualParseTree": true
+    },
+    {
+      "name": "Debug Snippet",
+      "type": "antlr-debug",
+      "request": "launch",
+      "input": "prototype/Snippet.example.txt",
+      "grammar": "prototype/SnippetLanguageParser.g4",
+      "printParseTree": true,
+      "visualParseTree": true
     }
   ]
 }

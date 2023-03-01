@@ -1,0 +1,23 @@
+USES "demo.dll"
+USES "Abacaledrssjk.dll"
+//health aa
+USES "abc.dcx.dll"
+//"xxx"
+ASSIGN y=3
+z=66+y //inline comment
+//v1 = 'text' + z
+v2 = "text" + y // This must be error, but it is not!!!
+str1="demo"
+temp1= "my demo {z} finished"
+temp2= "my demo {y+z} finished"
+//temp3 ="text {b+10*c-a^2}"
+//x1 = $"A phrase\nAnd a new line"
+IF z=3 {
+   ASSIGN n=n+1
+}
+IF v2="demo" && z>3
+{
+  ASSIGN n=n+2
+} ELSE {
+    ASSIGN n=n+3
+}
