@@ -11,14 +11,22 @@ program
     ;
 
 sentences
-    : (useSentence )*
+    : (useSentence | assignSentence)*
     // | ifSentence
     // | assignSentence
     ;
 
-// assignSentence
-//     : jsonObject
-//     ;
+assignSentence : IDENTIFIER EQUAL expression;
+
+expression: term ((ADD | SUB) term)*;
+
+term      : factor ((MUL | DIV) factor)*;
+
+factor    : IDENTIFIER
+          | INT
+          | FLOAT
+        //   | STRING
+          | OPEN_PARENTESIS expression CLOSE_PARENTESIS;
 
 // ifSentence
 //     : jsonObject
