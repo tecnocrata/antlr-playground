@@ -18,7 +18,7 @@ SUB       : '-';
 MUL       : '*';
 DIV       : '/';
 EQUAL     : '=';
-SINGLE_LINE_DOC_COMMENT: '//' InputCharacter* -> skip;
+// SINGLE_LINE_DOC_COMMENT: '//' InputCharacter* -> skip;
 USES: 'USES'; // {if (this.Text!="USES" && "USES".Contains(this.Text.ToLower())) { throw new Exception("USES must be in uppercase"); };};
 ASSIGN: 'ASSIGN';
 DOUBLE_QUOTE: '"';
@@ -28,7 +28,7 @@ FALSE:         'false';
 TRUE:          'true';
 // SENTENCE_SEPARATOR: '\r\n';
 
-DLL_EXTENSION: '.' [dD][lL][lL];
+// DLL_EXTENSION: '.' [dD][lL][lL];
 DLL_IDENTIFIER: ~["\r\n][a-zA-Z0-9]+;
 DLL_NAME: DLL_IDENTIFIER '.' [dD][lL][lL];
 // DOUBLE_STRING: '"' (~["\r\n] | '""')* '"';

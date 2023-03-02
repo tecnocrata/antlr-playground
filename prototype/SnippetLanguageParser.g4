@@ -15,7 +15,10 @@ sentences
     // | ifSentence
     // | assignSentence
     ;
-
+useSentence
+    : USES DOUBLE_QUOTE DLL_NAME DOUBLE_QUOTE//{ NotifyErrorListeners($USES, "program must not end with semicolon!", null); }
+    ;
+    
 assignSentence : IDENTIFIER EQUAL expression;
 
 expression: term ((ADD | SUB) term)*;
@@ -31,10 +34,6 @@ factor    : IDENTIFIER
 // ifSentence
 //     : jsonObject
 //     ;
-
-useSentence
-    : USES DOUBLE_QUOTE DLL_NAME DOUBLE_QUOTE//{ NotifyErrorListeners($USES, "program must not end with semicolon!", null); }
-    ;
 
 // jsonObject
 //     : OPEN_BRACE keyValuePairs CLOSE_BRACE
