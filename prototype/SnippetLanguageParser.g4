@@ -16,10 +16,13 @@ sentences
     // | assignSentence
     ;
 useSentence
-    : USES DOUBLE_QUOTE DLL_NAME DOUBLE_QUOTE//{ NotifyErrorListeners($USES, "program must not end with semicolon!", null); }
+    : USES DLL//{ NotifyErrorListeners($USES, "program must not end with semicolon!", null); }
     ;
     
-assignSentence : IDENTIFIER EQUAL expression;
+assignSentence 
+            : ASSIGN IDENTIFIER EQUAL expression
+            | IDENTIFIER EQUAL expression
+            ;
 
 expression: term ((ADD | SUB) term)*;
 
