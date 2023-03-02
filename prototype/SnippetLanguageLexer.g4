@@ -18,7 +18,7 @@ SUB       : '-';
 MUL       : '*';
 DIV       : '/';
 EQUAL     : '=';
-// SINGLE_LINE_DOC_COMMENT: '//' InputCharacter* -> skip;
+
 USES: 'USES'; // {if (this.Text!="USES" && "USES".Contains(this.Text.ToLower())) { throw new Exception("USES must be in uppercase"); };};
 ASSIGN: 'ASSIGN';
 DOUBLE_QUOTE: '"';
@@ -37,7 +37,7 @@ INT       : [0-9]+;
 FLOAT     : [0-9]+ '.' [0-9]*;
 
 IDENTIFIER :  [A-Za-z0-9]+;
-// LINE_COMMENT : '//' .*? '\r'? '\n' -> skip ; // Match "//" stuff '\n'
+LINE_COMMENT : '//' .*? '\r'? '\n' -> skip ; // Match "//" stuff '\n'
 WS
     :   [ \t\r\n]+ -> skip
     ;
