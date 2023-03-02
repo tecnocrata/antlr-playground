@@ -30,7 +30,7 @@ TRUE:          'true';
 
 DLL_EXTENSION: '.' [dD][lL][lL];
 DLL_IDENTIFIER: ~["\r\n][a-zA-Z0-9]+;
-DLL_NAME: [a-zA-Z0-9]+ '.' [dD][lL][lL];
+DLL_NAME: DLL_IDENTIFIER '.' [dD][lL][lL];
 // DOUBLE_STRING: '"' (~["\r\n] | '""')* '"';
 
 INT       : [0-9]+;
