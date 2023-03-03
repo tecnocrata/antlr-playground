@@ -51,6 +51,15 @@
       "grammar": "prototype/SnippetLanguageParser.g4",
       "printParseTree": true,
       "visualParseTree": true
+    },
+    {
+      "name": "Debug CSV",
+      "type": "antlr-debug",
+      "request": "launch",
+      "input": "07/sample.csv",
+      "grammar": "07/csv.g4",
+      "printParseTree": true,
+      "visualParseTree": true
     }
   ]
 }
