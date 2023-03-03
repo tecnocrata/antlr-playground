@@ -11,10 +11,13 @@ program
     ;
 
 sentences
-    : (useSentence | assignSentence)*
+    : header (assignSentence)*
     // | ifSentence
     // | assignSentence
     ;
+
+header: useSentence*;
+
 useSentence
     : USES DLL//{ NotifyErrorListeners($USES, "program must not end with semicolon!", null); }
     ;
