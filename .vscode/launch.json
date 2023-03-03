@@ -56,7 +56,7 @@
       "name": "Debug CSV",
       "type": "antlr-debug",
       "request": "launch",
-      "input": "07/sample.csv",
+      "input": "07/example.csv",
       "grammar": "07/csv.g4",
       "printParseTree": true,
       "visualParseTree": true
