@@ -34,7 +34,7 @@ term      : factor ((MUL | DIV) factor)*;
 factor    : IDENTIFIER
           | INT
           | FLOAT
-        //   | STRING
+          | DOUBLE_STRING
           | OPEN_PARENTESIS expression CLOSE_PARENTESIS;
 
 // ifSentence
