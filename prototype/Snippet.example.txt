@@ -4,6 +4,9 @@ USES "Abacaledrssjk.dll"
 USES "abc.dcx.dll"
 //"xxx"
 ASSIGN y=3
+y1=-4
+y2=1.44
+y3=-.67
 z=66+y //inline comment
 //v1 = 'text' + z
 v2 = "text" + y // This must be error, but it is not!!!

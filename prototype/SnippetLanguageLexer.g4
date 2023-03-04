@@ -34,8 +34,8 @@ DLL_NAME: ~["\r\n]([a-zA-Z0-9_.]+ '.' [dD][lL][lL]);
 DLL: '"' DLL_NAME '"';
 DOUBLE_STRING: '"' (~["\r\n] | '""')* '"';
 
-INT       : DIGIT+;
-FLOAT     : DIGIT+ '.' DIGIT*;
+INT       : '-'? DIGIT+;
+FLOAT     : '-'? ('.' DIGIT+ | DIGIT+ ('.' DIGIT*)? ) ;
 
 IDENTIFIER :  LETTER (LETTER|DIGIT)*;
 fragment LETTER      :   [a-zA-Z\u0080-\u00FF_] ;
