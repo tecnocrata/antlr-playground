@@ -34,10 +34,12 @@ DLL_NAME: ~["\r\n]([a-zA-Z0-9_.]+ '.' [dD][lL][lL]);
 DLL: '"' DLL_NAME '"';
 DOUBLE_STRING: '"' (~["\r\n] | '""')* '"';
 
-INT       : [0-9]+;
-FLOAT     : [0-9]+ '.' [0-9]*;
+INT       : DIGIT+;
+FLOAT     : DIGIT+ '.' DIGIT*;
 
-IDENTIFIER :  [A-Za-z0-9]+;
+IDENTIFIER :  LETTER (LETTER|DIGIT)*;
+fragment LETTER      :   [a-zA-Z\u0080-\u00FF_] ;
+DIGIT       :   [0-9] ;
 LINE_COMMENT : '//' .*? '\r'? '\n' -> skip ; // Match "//" stuff '\n'
 WS
     :   [ \t\r\n]+ -> skip
