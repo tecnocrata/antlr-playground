@@ -60,6 +60,15 @@
       "grammar": "07/csv.g4",
       "printParseTree": true,
       "visualParseTree": true
+    },
+    {
+      "name": "Debug JSON",
+      "type": "antlr-debug",
+      "request": "launch",
+      "input": "08/example.json",
+      "grammar": "08/json.g4",
+      "printParseTree": true,
+      "visualParseTree": true
     }
   ]
 }
