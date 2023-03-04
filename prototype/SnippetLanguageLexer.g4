@@ -39,7 +39,7 @@ FLOAT     : DIGIT+ '.' DIGIT*;
 
 IDENTIFIER :  LETTER (LETTER|DIGIT)*;
 fragment LETTER      :   [a-zA-Z\u0080-\u00FF_] ;
-DIGIT       :   [0-9] ;
+fragment DIGIT       :   [0-9] ;
 LINE_COMMENT : '//' .*? '\r'? '\n' -> skip ; // Match "//" stuff '\n'
 WS
     :   [ \t\r\n]+ -> skip
