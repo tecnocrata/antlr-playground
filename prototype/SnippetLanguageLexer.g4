@@ -32,7 +32,7 @@ TRUE:          'true';
 // DLL_IDENTIFIER: ~["\r\n][a-zA-Z0-9_.]+;
 DLL_NAME: ~["\r\n]([a-zA-Z0-9_.]+ '.' [dD][lL][lL]);
 DLL: '"' DLL_NAME '"';
-DOUBLE_STRING: '"' (~["\r\n] | '""')* '"';
+DOUBLE_STRING: '"' (~["\r\n] | '""')* '"'; //'"' ('\\"'|.)*? '"' ;
 
 INT       : '-'? DIGIT+;
 FLOAT     : '-'? ('.' DIGIT+ | DIGIT+ ('.' DIGIT*)? ) ;
