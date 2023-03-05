@@ -13,7 +13,7 @@ program
 sentences
     : header (assignSentence)*
     // | ifSentence
-    // | assignSentence
+    // | dynamicSentence
     ;
 
 header: useSentence*;
@@ -26,6 +26,8 @@ assignSentence
             : ASSIGN IDENTIFIER EQUAL expression
             | IDENTIFIER EQUAL expression
             ;
+
+// ifSentence: 'if' expr 'then' stat ('else' stat)?;
 
 expression: term ((ADD | SUB) term)*;
 
