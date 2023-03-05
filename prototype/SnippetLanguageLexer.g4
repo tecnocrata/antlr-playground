@@ -20,7 +20,14 @@ SUB       : '-';
 MUL       : '*';
 DIV       : '/';
 EQUAL     : '=';
+NOT_EQUAL : '!=';
+LESS      : '<';
+GREATER   : '>';
+LESS_EQUAL: '<=';
+GREATER_EQUAL: '>=';
 EXCLAMATION: '!';
+AND: '&';
+OR: '|';
 
 USES: 'USES'; // {if (this.Text!="USES" && "USES".Contains(this.Text.ToLower())) { throw new Exception("USES must be in uppercase"); };};
 ASSIGN: 'ASSIGN';
