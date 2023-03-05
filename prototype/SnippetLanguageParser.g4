@@ -7,12 +7,11 @@ options { tokenVocab=SnippetLanguageLexer; } //superClass=CSharpPreprocessorPars
 
 
 program
-    : sentences EOF
+    : header sentences EOF
     ;
 
 sentences
-    : header (assignSentence)*
-    // | ifSentence
+    : (assignSentence | ifSentence)*
     // | dynamicSentence
     ;
 
@@ -23,42 +22,34 @@ useSentence
     ;
     
 assignSentence 
-            : ASSIGN IDENTIFIER EQUAL expression
-            | IDENTIFIER EQUAL expression
+            : ASSIGN IDENTIFIER EQUAL expr
+            | IDENTIFIER EQUAL expr
             ;
 
-// ifSentence: 'if' expr 'then' stat ('else' stat)?;
+ifSentence: IF expr OPEN_BRACE sentences CLOSE_BRACE (ELSE OPEN_BRACE sentences CLOSE_BRACE)?;
 
-expression: term ((ADD | SUB) term)*;
+expr: IDENTIFIER OPEN_PARENTESIS exprList? CLOSE_PARENTESIS
+    | expr OPEN_BRAK expr CLOSE_BRAK
+    | SUB expr
+    | EXCLAMATION expr
+    | expr MUL expr
+    | expr (ADD|SUB) expr
+    | expr EQUAL expr
+    | IDENTIFIER | INT | FLOAT | DOUBLE_STRING
+    | OPEN_PARENTESIS expr CLOSE_PARENTESIS
+    ;
+exprList : expr (',' expr)* ;
 
-term      : factor ((MUL | DIV) factor)*;
+// expression: term ((ADD | SUB) term)*;
 
-factor    : IDENTIFIER
-          | INT
-          | FLOAT
-          | DOUBLE_STRING
-          | OPEN_PARENTESIS expression CLOSE_PARENTESIS;
+// term      : factor ((MUL | DIV) factor)*;
 
-// ifSentence
-//     : jsonObject
-//     ;
+// factor    : IDENTIFIER
+//           | INT
+//           | FLOAT
+//           | DOUBLE_STRING
+//           | OPEN_PARENTESIS expression CLOSE_PARENTESIS;
 
-// jsonObject
-//     : OPEN_BRACE keyValuePairs CLOSE_BRACE
-//     ;
-
-// keyValuePairs
-//     :(keyValuePair (COMMA keyValuePair)*)?
-//     ;
-
-// keyValuePair
-//     : IDENTIFIER COLON (primitive | jsonObject)
-//     ;
-
-// primitive
-//     : string
-//     | bool
-//     ;
 
 // string
 //     : DOUBLE_STRING
