@@ -53,6 +53,8 @@ IDENTIFIER :  LETTER (LETTER|DIGIT)*;
 fragment LETTER      :   [a-zA-Z\u0080-\u00FF_] ;
 fragment DIGIT       :   [0-9] ;
 LINE_COMMENT : '//' .*? '\r'? '\n' -> skip ; // Match "//" stuff '\n'
+// Match both UNIX and Windows newlines
+//NL      :   '\r'? '\n' ;
 WS
     :   [ \t\r\n]+ -> skip
     ;

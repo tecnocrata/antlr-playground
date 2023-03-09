@@ -8,6 +8,7 @@ y1=-4
 y2=1.44
 y3=-.67
 z=66+y //inline comment
+ASSIGN prompt="prompts\{env}\"
 //v1 = 'text' + z
 v2 = "text" + y // This must be error, but it is not!!!
 str1="demo"
