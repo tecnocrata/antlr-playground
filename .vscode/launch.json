@@ -69,6 +69,15 @@
       "grammar": "08/json.g4",
       "printParseTree": true,
       "visualParseTree": true
+    },
+    {
+      "name": "Debug Property Converter",
+      "type": "antlr-debug",
+      "request": "launch",
+      "input": "11/example.properties",
+      "grammar": "11/PropertyFile.g4",
+      "printParseTree": true,
+      "visualParseTree": true
     }
   ]
 }
