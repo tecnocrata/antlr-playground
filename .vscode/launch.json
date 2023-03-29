@@ -47,8 +47,9 @@
       "name": "Debug Snippet",
       "type": "antlr-debug",
       "request": "launch",
-      "input": "prototype/Snippet.example.txt",
-      "grammar": "prototype/SnippetLanguageParser.g4",
+      "input": "prototype/xSnippet.example.txt",
+      "grammar": "prototype/xSnippetLanguageParser.g4",
+      "startRule": "program",
       "printParseTree": true,
       "visualParseTree": true
     },

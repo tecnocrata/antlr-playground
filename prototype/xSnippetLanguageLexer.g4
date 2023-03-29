@@ -1,4 +1,4 @@
-lexer grammar SnippetLanguageLexer;
+lexer grammar xSnippetLanguageLexer;
 
 // @header {
 // package com.example;

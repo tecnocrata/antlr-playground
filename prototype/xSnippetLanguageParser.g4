@@ -1,6 +1,6 @@
-parser grammar SnippetLanguageParser;
+parser grammar xSnippetLanguageParser;
 
-options { tokenVocab=SnippetLanguageLexer; } //superClass=CSharpPreprocessorParserBase;
+options { tokenVocab=xSnippetLanguageLexer; } //superClass=CSharpPreprocessorParserBase;
 // @header {
 // package com.example;
 // }
