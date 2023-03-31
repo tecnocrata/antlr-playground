@@ -19,6 +19,7 @@ ADD       : '+';
 SUB       : '-';
 MUL       : '*';
 DIV       : '/';
+MOD       : '%';
 EQUAL     : '=';
 NOT_EQUAL : '!=';
 LESS      : '<';

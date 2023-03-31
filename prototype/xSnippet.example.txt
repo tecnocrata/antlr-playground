@@ -25,3 +25,12 @@ IF v2="demo" & z>3
 } ELSE {
     ASSIGN n=n+3
 }
+
+IF ContactID % 10 = 0
+{
+  ASSIGN Logcall = 1
+}
+ELSE
+{
+  ASSIGN Logcall = 0
+}
