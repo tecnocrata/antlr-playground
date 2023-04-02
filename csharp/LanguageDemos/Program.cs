@@ -65,3 +65,6 @@ calcVisitor.Calculate(expr);
 
 var calcListener = new LanguageLibrary.Sample09._02ListenerWay.Calculator();
 calcListener.Calculate(expr);
+
+var calcannotatorListener = new LanguageLibrary.Sample09._03AnnotationListenerWay.Calculator();
+calcannotatorListener.Calculate(expr);

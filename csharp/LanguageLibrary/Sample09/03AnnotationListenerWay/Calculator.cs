@@ -1,7 +1,7 @@
 ﻿using Antlr4.Runtime;
 using Antlr4.Runtime.Tree;
 
-namespace LanguageLibrary.Sample09._02ListenerWay
+namespace LanguageLibrary.Sample09._03AnnotationListenerWay
 {
     public class Calculator
     {
@@ -11,17 +11,17 @@ namespace LanguageLibrary.Sample09._02ListenerWay
             var lexer = new LExprLexer(inputStream);
             var tokens = new CommonTokenStream(lexer);
             var parser = new LExprParser(tokens); // pass column number!
-            //parser.BuildParseTree = false; // don't waste time bulding a tree
+                                                  //parser.BuildParseTree = false; // don't waste time bulding a tree
             var tree = parser.s();
 
 
             // create a standard ANTLR parse tree walker
             ParseTreeWalker walker = new ParseTreeWalker();
             // create listener then feed to walker
-            var loader = new CalcListener();
+            var loader = new CalcAnnotatorListener();
             walker.Walk(loader, tree);        // walk parse tree
-            var result = loader._stack.Pop();
-            Console.WriteLine($"Listener result {result}");
+            var result = loader.GetValue(tree);
+            Console.WriteLine($"Annnotator Listener result {result}");
 
         }
     }
