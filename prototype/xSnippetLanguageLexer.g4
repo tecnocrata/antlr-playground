@@ -1,4 +1,4 @@
-lexer grammar SnippetLanguageLexer;
+lexer grammar xSnippetLanguageLexer;
 
 // @header {
 // package com.example;
@@ -19,6 +19,7 @@ ADD       : '+';
 SUB       : '-';
 MUL       : '*';
 DIV       : '/';
+MOD       : '%';
 EQUAL     : '=';
 NOT_EQUAL : '!=';
 LESS      : '<';

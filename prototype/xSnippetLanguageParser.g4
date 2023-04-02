@@ -1,6 +1,6 @@
-parser grammar SnippetLanguageParser;
+parser grammar xSnippetLanguageParser;
 
-options { tokenVocab=SnippetLanguageLexer; } //superClass=CSharpPreprocessorParserBase;
+options { tokenVocab=xSnippetLanguageLexer; } //superClass=CSharpPreprocessorParserBase;
 // @header {
 // package com.example;
 // }
@@ -33,7 +33,7 @@ expr: IDENTIFIER OPEN_PARENTESIS exprList? CLOSE_PARENTESIS
     | SUB expr
     | EXCLAMATION expr
     | expr MUL expr
-    | expr (ADD|SUB) expr
+    | expr (ADD|SUB|MOD) expr
     | expr (EQUAL|NOT_EQUAL|LESS|GREATER|LESS_EQUAL|GREATER_EQUAL|AND|OR) expr
     | IDENTIFIER | INT | FLOAT | DOUBLE_STRING
     | OPEN_PARENTESIS expr CLOSE_PARENTESIS
