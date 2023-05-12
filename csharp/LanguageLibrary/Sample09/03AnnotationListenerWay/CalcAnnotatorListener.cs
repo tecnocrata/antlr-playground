@@ -42,7 +42,7 @@ namespace LanguageLibrary.Sample09._03AnnotationListenerWay
         public override void ExitS([NotNull] LExprParser.SContext context)
         {
             //base.ExitS(context);
-            SetValue(context, GetValue(context.e()));
+            SetValue(context, GetValue(context.e())); // like: int s() { return e(); }
         }
     }
 }

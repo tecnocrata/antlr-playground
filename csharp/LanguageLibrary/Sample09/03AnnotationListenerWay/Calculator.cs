@@ -11,7 +11,7 @@ namespace LanguageLibrary.Sample09._03AnnotationListenerWay
             var lexer = new LExprLexer(inputStream);
             var tokens = new CommonTokenStream(lexer);
             var parser = new LExprParser(tokens); // pass column number!
-                                                  //parser.BuildParseTree = false; // don't waste time bulding a tree
+            parser.BuildParseTree = true; // tell ANTLR to build a parse tree, I NEED TO SAY it works without this line! Should it be the default value?
             var tree = parser.s();
 
 
